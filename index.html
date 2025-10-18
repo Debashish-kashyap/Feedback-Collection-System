@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="feedback-header">
+      <span class="feedback-title">Feedback</span>
+      <button class="close-btn" aria-label="Close">&times;</button>
+    </div>
+
+    <div class="header-image-container">
+      <img src="cursor-ai-header.png.png" alt="Cursor AI: VibeCode Mastery Banner" class="header-image">
+    </div>
+    <form id="feedbackForm" autocomplete="off">
+      <h2>How was your experience?</h2>
+      <div class="form-group">
+        <label for="name"><b>Name</b></label>
+        <input type="text" id="name" maxlength="40" placeholder="Enter your name*" required>
+        <small class="error" id="nameError"></small>
+      </div>
+      <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input type="email" id="email" maxlength="60" placeholder="Enter your email*" required>
+        <small class="error" id="emailError"></small>
+      </div>
+      <div class="form-group">
+        <label for="mobile"><b>Mobile Number</b></label>
+        <input type="tel" id="mobile" maxlength="15" placeholder="Enter your mobile number*" required>
+        <small class="error" id="mobileError"></small>
+      </div>
+      <div class="form-group">
+        <label><b>Rate it</b></label>
+        <div class="star-rating" id="starRating">
+          <!-- Stars filled with JS -->
+        </div>
+        <small class="error" id="ratingError"></small>
+      </div>
+      <div class="form-group">
+        <label for="comment"><b>Please tell us more</b></label>
+        <textarea id="comment" maxlength="300" rows="3" placeholder="Your comments..."></textarea>
+        <div class="comment-info"><span id="charCount">0</span>/300</div>
+      </div>
+      <button type="submit" class="submit-btn">Share</button>
+      <div class="help-link">
+        <p>
+          Questions or concerns? Visit the <a href="#" id="helpCenterLink">Help Center</a>.
+        </p>
+      </div>
+    </form>
+
+    <div class="feedback-entries-section">
+      <h3>Previous Feedback</h3>
+      <ul id="feedbackList"></ul>
+    </div>
+  </div>
+  <div id="helpCenterModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="modal-close" id="modalCloseBtn">&times;</span>
+      <h2>Contact Customer Support
+      </h2>
+      <p>If you have questions or need help, contact:</p>
+      <p style="margin-top:12px;font-size:1.15em;"><b>Email:</b> <a href="mailto:kashyapdebashish556@gmail.com">kashyapdebashish556@gmail.com</a></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
