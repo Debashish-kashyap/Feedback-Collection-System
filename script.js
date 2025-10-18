@@ -104,7 +104,7 @@ form.addEventListener('submit', async function(event) {
 
   // --- Send to n8n webhook ---
   try {
-    await fetch('https://debashish03.app.n8n.cloud/webhook-test/8d7b7abc-9f97-4f78-a56a-e383123ecadb', {
+    await fetch('https://debashish03.app.n8n.cloud/webhook/8d7b7abc-9f97-4f78-a56a-e383123ecadb', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(feedback),
@@ -189,3 +189,4 @@ helpCenterModal.addEventListener('click', function(e) {
     helpCenterModal.style.display = 'none';
   }
 });
+
